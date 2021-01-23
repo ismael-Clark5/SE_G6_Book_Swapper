@@ -1,17 +1,25 @@
-from flask import Flask, escape, request
+from flask import Flask, escape, request, render_template, url_for
 
 app = Flask(__name__)
 
+
+posts = [
+    {
+        'author': 'Ismael Clark',
+        'title': 'First Book',
+        'content': 'First book',
+        'date_posted': 'January 21 2021'
+    }
+]
 @app.route('/')
 @app.route('/home')
 def home():
-    name = request.args.get("name", "World")
-    return f'<h1>Home, page!</h1>'
+    return render_template('home.html', posts = posts)
 
 
 @app.route('/about')
 def about():
-    return f'<h1>About Page</h1>'
+    return render_template('about.html', title = 'About the app')
 
 
 if __name__ == '__main__':
