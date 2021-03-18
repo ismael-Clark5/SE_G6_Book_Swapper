@@ -1,9 +1,9 @@
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
-from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, DateField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
-from book_swapper.models import User
 from flask_login import current_user
+from book_swapper.models import User
 
 
 class RegistrationForm(FlaskForm):
@@ -11,7 +11,7 @@ class RegistrationForm(FlaskForm):
                            validators=[DataRequired(), Length(min=2, max=20)])
     email = StringField('Email',
                         validators=[DataRequired(), Email()])
-    password = PasswordField('Password', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired(), Length(min=8)] )
     confirm_password = PasswordField('Confirm Password',
                                      validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Sign Up')
@@ -54,16 +54,6 @@ class UpdateAccountForm(FlaskForm):
             user = User.query.filter_by(email = email.data).first()
             if user :
                 raise ValidationError('Email already taken. Please choose a different one')
-
-
-class NewBookForm(FlaskForm):
-    title = StringField('Title', validators=[DataRequired()])
-    subject = StringField('Subject', validators=[DataRequired()])
-    isbn = StringField('ISBN', validators=[DataRequired()])
-    subject_subcategory = StringField('Subject #2', validators=[DataRequired()])
-    condition = TextAreaField('Condition', validators=[DataRequired()])
-    date_posted = DateField('Date Posted', format='%Y-%m-%d')
-    submit = SubmitField('Post')
 
 
 class RequestResetForm(FlaskForm):
