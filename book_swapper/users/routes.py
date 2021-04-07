@@ -1,10 +1,11 @@
 from flask import render_template, url_for, flash, redirect, request, Blueprint
 from flask_login import login_user, current_user, logout_user, login_required
-from book_swapper import db, bcrypt
+from book_swapper import db, bcrypt, socketio
 from book_swapper.models import User, Book
 from book_swapper.users.forms import (RegistrationForm, LoginForm, UpdateAccountForm,
                                    RequestResetForm, ResetPasswordForm)
 from book_swapper.users.utils import save_picture, send_reset_email
+from flask_socketio import SocketIO
 
 users = Blueprint('users', __name__)
 
@@ -106,3 +107,15 @@ def reset_token(token):
         flash(f'Your password has been updated. You can now log in!', 'success')
         return redirect(url_for('users.login'))
     return render_template('reset_token.html', title='Reset Password', form=form)
+
+@users.route('/chat')
+def sessions(methods = ['GET', 'POST']):
+    return render_template('session.html')
+
+def message_received(methods = ['GET', 'POST']):
+    print('Message was received!')
+
+@socketio.on('my event')
+def handle_my_custom_event(json, methods = ['GET', 'POST']):
+    print('received my event: ' + str(json))
+    socketio.emit('my response', json, callback=message_received)
