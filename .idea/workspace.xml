@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0374e0be-b690-4a99-8fc0-92e505bc275b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/book_swapper/errors/handlers.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/book_swapper/__init__.py" afterPath="$PROJECT_DIR$/book_swapper/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/book_swapper/templates/book.html" afterPath="$PROJECT_DIR$/book_swapper/templates/book.html" />
-      <change beforePath="$PROJECT_DIR$/book_swapper/users/routes.py" afterPath="$PROJECT_DIR$/book_swapper/users/routes.py" />
-    </list>
+    <list default="true" id="0374e0be-b690-4a99-8fc0-92e505bc275b" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +14,8 @@
       <file leaf-file-name="routes.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/book_swapper/users/routes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1687">
-              <caret line="120" column="64" lean-forward="false" selection-start-line="120" selection-start-column="64" selection-end-line="120" selection-end-column="64" />
+            <state relative-caret-position="344">
+              <caret line="114" column="20" lean-forward="false" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="20" />
               <folding>
                 <element signature="e#0#79#0" expanded="true" />
               </folding>
@@ -32,8 +26,8 @@
       <file leaf-file-name="session.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/book_swapper/templates/session.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="107">
+              <caret line="19" column="76" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="76" />
               <folding>
                 <element signature="n#style#0;n#h3#0;n#body#0;n#!!top" expanded="true" />
               </folding>
@@ -643,8 +637,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/book_swapper/users/routes.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1687">
-          <caret line="120" column="64" lean-forward="false" selection-start-line="120" selection-start-column="64" selection-end-line="120" selection-end-column="64" />
+        <state relative-caret-position="344">
+          <caret line="114" column="20" lean-forward="false" selection-start-line="114" selection-start-column="4" selection-end-line="114" selection-end-column="20" />
           <folding>
             <element signature="e#0#79#0" expanded="true" />
           </folding>
@@ -653,8 +647,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/book_swapper/templates/session.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="107">
+          <caret line="19" column="76" lean-forward="false" selection-start-line="19" selection-start-column="68" selection-end-line="19" selection-end-column="76" />
           <folding>
             <element signature="n#style#0;n#h3#0;n#body#0;n#!!top" expanded="true" />
           </folding>
